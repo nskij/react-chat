@@ -11,7 +11,8 @@ const styles = {
   },
   wrapper: {
     display: 'flex',
-    flexWrap: 'wrap',
+    flexWrap: 'wrap', 
+    justifyContent: 'center',
   },
 };
 
@@ -22,14 +23,12 @@ export default class Message extends React.Component {
     return (
       <div className="Message">
       <List>
-        <ListItem disabled="true">
+        <ListItem disabled="true" style={styles.wrapper}>
           <Avatar className="" src={this.props.message.profile_image} />
-          <span style={{marginBottom: -5}}>@{this.props.message.user_name}</span>
-          <div className="">
-            <Chip style={styles.chip} >
-              {this.props.message.text}
-            </Chip>
-          </div>
+          <span>@{this.props.message.user_name}</span>
+          <Chip style={styles.chip} >
+            {this.props.message.text}
+          </Chip>
         </ListItem>
       </List>
       </div>

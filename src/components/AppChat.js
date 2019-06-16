@@ -24,9 +24,9 @@ class AppChat extends Component {
     return (
       <MuiThemeProvider>
         <div className="App">
-          <div className="App-header">
+          {/* <div className="App-header">
             <h2>Chat</h2>
-          </div>
+          </div> */}
           <div className="MessageList">
             {this.state.messages.map((m, i) => {
               return <Message key={i} message={m} />
